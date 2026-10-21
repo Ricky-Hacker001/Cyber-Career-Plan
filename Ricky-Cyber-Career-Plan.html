@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricky&#x27;s Cybersecurity Career Plan</title>
+<style>
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --fg:#1b2220; --muted:#5f6b68; --line:#d9e0dd;
+  --accent:#0f6e5c; --accent-soft:#deeee8; --mark:#9a5b00; --mark-soft:#fbead0;
+}
+@media (prefers-color-scheme: dark){ :root{
+  --bg:#111716; --surface:#192120; --fg:#e8edeb; --muted:#9cab a7; --line:#2c3836;
+  --accent:#64cdb2; --accent-soft:#173b33; --mark:#f0b35a; --mark-soft:#3d2c10; color-scheme:dark } }
+@media (prefers-color-scheme: dark){ :root{ --muted:#9caba7 } }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:24px 16px 72px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:32px}
+@media (max-width:880px){.wrap{grid-template-columns:minmax(0,1fr);gap:12px}}
+nav{position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding-top:8px;font-size:13.5px}
+nav .label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+nav ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+nav a{display:block;padding:5px 9px;border-radius:6px;color:var(--fg);text-decoration:none}
+nav a:hover,nav a.active{background:var(--accent-soft)}
+@media (max-width:880px){nav{position:static;max-height:none}nav ol{flex-direction:row;flex-wrap:wrap;gap:6px}nav a{border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--surface)}}
+main{min-width:0}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 4px;letter-spacing:-.01em}
+h1 + p{color:var(--muted);font-size:16px}
+h2{font-size:23px;margin:0 0 10px;line-height:1.2}
+h3{font-size:16.5px;margin:22px 0 6px;color:var(--accent)}
+section{padding:26px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+p{margin:0 0 10px;max-width:76ch}
+p.lead{margin-top:14px}
+ul,ol{margin:0 0 12px;padding-left:22px;max-width:80ch}
+li{margin-bottom:4px}
+li > ul{margin-top:4px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+a{color:var(--accent)}
+strong{font-weight:650}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface);margin:8px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg);font-weight:600}
+tbody tr:last-child td{border-bottom:0}
+td.time{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.total td{font-weight:700}
+ul.tasks{list-style:none;padding-left:0}
+ul.tasks label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:4px 6px;border-radius:6px}
+ul.tasks label:hover{background:var(--accent-soft)}
+ul.tasks input{margin-top:4px;accent-color:var(--accent)}
+ul.tasks input:checked + span{color:var(--muted);text-decoration:line-through}
+.tracker{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0 18px}
+.tracker-title{font-weight:650;margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip:focus-visible,nav a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.small{font-size:12.5px;color:var(--muted);font-weight:400}
+footer{margin-top:28px;font-size:12.5px;color:var(--muted)}
+@media print{nav,.tracker{display:none}body{font-size:12px}section{break-inside:auto}.tbl{border:0}h2{break-before:page}h2:first-of-type{break-before:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Contents"><p class="label">Contents</p><ol><li><a href="#1-where-you-are-right-now">1. Where you are right now</a></li>
+<li><a href="#2-daily-timetables">2. Daily timetables</a></li>
+<li><a href="#3-the-learning-path-in-order">3. The learning path (in order)</a></li>
+<li><a href="#4-weekly-rotation-at-a-glance">4. Weekly rotation at a glance</a></li>
+<li><a href="#5-projects-one-at-a-time">5. Projects (one at a time)</a></li>
+<li><a href="#6-weekly-hours-phase-b-five-office-days">6. Weekly hours (Phase B, five office days)</a></li>
+<li><a href="#7-fitness-and-food">7. Fitness and food</a></li>
+<li><a href="#8-ricky-techie-content">8. Ricky.Techie content</a></li>
+<li><a href="#9-resource-library">9. Resource library</a></li>
+<li><a href="#10-three-modes">10. Three modes</a></li>
+<li><a href="#11-weekly-scorecard-sunday-12-00">11. Weekly scorecard (Sunday 12:00)</a></li>
+<li><a href="#12-what-to-tell-me-next">12. What to tell me next</a></li></ol></nav>
+<main>
+<h1>Ricky's Cybersecurity Career Plan</h1>
+<p>Built 20 October 2026, Chennai (IST). Simple version. Everything here is free unless marked.</p>
+<section id="1-where-you-are-right-now">
+<h2>1. Where you are right now</h2>
+<p class="lead"><strong>Facts</strong></p>
+<ul class="">
+<li>Accenture joins <strong>Fri 11 Dec 2026</strong> (Cloud Native Microservices Engineer). Shift and office mode unknown.</li>
+<li>Aerovant: <strong>Oct</strong> office 10:00–18:00, 2 h commute total. <strong>Nov</strong> hybrid, 2–3 office days, same timing. <strong>Dec onward</strong> work from home, weekday evenings only.</li>
+<li>Sleep: lights out <strong>23:00</strong>, wake <strong>06:15</strong> (7 h 15 min). Not negotiable.</li>
+<li>Course: <strong>Cyber Tech Mastery (Selfmade Ninja Academy)</strong>, buying <strong>January 2027</strong>. Five months, so Jan–May 2027. Lab access for one year after.</li>
+<li>Skill level: beginner. Basic Burp Suite, 2–4 PortSwigger labs, none of the 12 diagnostic questions. That is fine. The plan starts from zero.</li>
+<li>Weekends free. No refrigerator. Pull-up bar, dumbbells to 10 kg, skipping rope.</li>
+<li>Goal: AppSec / Cloud Security / DevSecOps engineer in 12–18 months (Dec 2027 – Jun 2028).</li>
+</ul>
+<p class="lead"><strong>Four phases</strong></p>
+<div class="tbl"><table><thead><tr><th>Phase</th><th>Dates</th><th>Your week</th><th>Study target</th></tr></thead><tbody>
+<tr><td>A1 Office</td><td>20 Oct – 31 Oct</td><td>Office 10–6, 2 h commute</td><td>2.5 h/day active + 1 h passive</td></tr>
+<tr><td>A2 Hybrid</td><td>1 Nov – 30 Nov</td><td>2–3 office days, rest WFH</td><td>Office day 2.5 h, WFH day 4 h</td></tr>
+<tr><td>A3 Free days</td><td>1 Dec – 10 Dec</td><td>Aerovant evenings only, daytime free</td><td>5 h/day, no more</td></tr>
+<tr><td>B Accenture</td><td>11 Dec onward</td><td>Accenture day + Aerovant evening</td><td>1.5 h/day Mon–Thu, Sat 3 h, Sun 1.5 h</td></tr>
+</tbody></table></div>
+<p><strong>Priority order</strong> (a guide, not permission to skip sleep)</p>
+<ol class="">
+<li>Jobs (Accenture, Aerovant)</li>
+<li>Course + labs</li>
+<li>Projects</li>
+<li>Fitness, food, sleep</li>
+<li>Ricky.Techie content</li>
+<li>Interview prep</li>
+<li>Family, friends, rest</li>
+</ol>
+</section>
+<section id="2-daily-timetables">
+<h2>2. Daily timetables</h2>
+<h3 id="a1-office-day-oct-and-nov-office-days">A1: Office day (Oct, and Nov office days)</h3>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Dur</th><th>What</th><th>Priority</th></tr></thead><tbody>
+<tr><td class="time">06:15–06:30</td><td>15m</td><td>Wake, water, 5-min mobility</td><td>Must</td></tr>
+<tr><td class="time">06:30–07:10</td><td>40m</td><td>Workout (see §7)</td><td>Important</td></tr>
+<tr><td class="time">07:10–08:00</td><td>50m</td><td>Shower, breakfast</td><td>Must</td></tr>
+<tr><td class="time">08:00–08:50</td><td>50m</td><td><strong>Study 1: read/watch</strong> the day's lesson, make 5 notes</td><td>Core</td></tr>
+<tr><td class="time">09:00–10:00</td><td>60m</td><td>Commute. Passive: one video or podcast from §9</td><td>Optional</td></tr>
+<tr><td class="time">10:00–18:00</td><td>8h</td><td>Aerovant</td><td>Must</td></tr>
+<tr><td class="time">18:00–19:00</td><td>60m</td><td>Commute, decompress, no study</td><td>Must</td></tr>
+<tr><td class="time">19:00–19:30</td><td>30m</td><td>Dinner</td><td>Must</td></tr>
+<tr><td class="time">19:30–21:00</td><td>90m</td><td><strong>Study 2: hands-on lab</strong> on the morning's topic</td><td>Core</td></tr>
+<tr><td class="time">21:00–21:30</td><td>30m</td><td>Write 5 lines: what I did, what broke, what I learned</td><td>Core</td></tr>
+<tr><td class="time">21:30–22:30</td><td>60m</td><td>Family, partner, friends, hobby</td><td>Must</td></tr>
+<tr><td class="time">22:30–23:00</td><td>30m</td><td>Wind-down, write tomorrow's one-line goal, lights out</td><td>Must</td></tr>
+</tbody></table></div>
+<h3 id="a2-wfh-day-nov-and-a3-free-day-1-10-dec">A2 WFH day (Nov) and A3 free day (1–10 Dec)</h3>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Dur</th><th>WFH day (Nov)</th><th>Free day (1–10 Dec)</th></tr></thead><tbody>
+<tr><td class="time">06:15–07:10</td><td>55m</td><td>Wake + workout</td><td>Wake + workout</td></tr>
+<tr><td class="time">07:10–08:00</td><td>50m</td><td>Shower, breakfast</td><td>Shower, breakfast</td></tr>
+<tr><td class="time">08:00–09:30</td><td>90m</td><td><strong>Study 1: lesson + reproduce</strong></td><td><strong>Study 1: lesson + reproduce</strong></td></tr>
+<tr><td class="time">09:30–10:00</td><td>30m</td><td>Buffer</td><td>Break, walk</td></tr>
+<tr><td class="time">10:00–13:00</td><td>3h</td><td>Aerovant</td><td><strong>Study 2: lab</strong> (2 h) + break</td></tr>
+<tr><td class="time">13:00–13:45</td><td>45m</td><td>Lunch</td><td>Lunch</td></tr>
+<tr><td class="time">13:45–18:00</td><td>4h15</td><td>Aerovant</td><td><strong>Study 3: project / second lab</strong> (14:00–16:00), then free</td></tr>
+<tr><td class="time">18:00–18:30</td><td>30m</td><td>Walk</td><td>Walk</td></tr>
+<tr><td class="time">18:30–20:00</td><td>90m</td><td><strong>Study 2: lab</strong></td><td>Aerovant evening work</td></tr>
+<tr><td class="time">20:00–20:30</td><td>30m</td><td>Dinner</td><td>Dinner</td></tr>
+<tr><td class="time">20:30–21:30</td><td>60m</td><td>Project (or write-up)</td><td>Aerovant / write-up</td></tr>
+<tr><td class="time">21:30–22:30</td><td>60m</td><td>Personal</td><td>Personal</td></tr>
+<tr><td class="time">22:30–23:00</td><td>30m</td><td>Wind-down, lights out</td><td>Wind-down, lights out</td></tr>
+</tbody></table></div>
+<h3 id="b-accenture-weekday-from-11-dec">B: Accenture weekday (from 11 Dec)</h3>
+<p>Assumes 09:00–18:00 and 45 min commute each way. If your shift is different, keep every block the same length and slide them: workout 15 min after waking, study block 2.5 h after work ends, lights out 7 h 15 min before wake time.</p>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Dur</th><th>What</th><th>Priority</th></tr></thead><tbody>
+<tr><td class="time">06:15–06:30</td><td>15m</td><td>Wake routine</td><td>Must</td></tr>
+<tr><td class="time">06:30–07:10</td><td>40m</td><td>Workout</td><td>Important</td></tr>
+<tr><td class="time">07:10–08:10</td><td>60m</td><td>Shower, breakfast, pack lunch</td><td>Must</td></tr>
+<tr><td class="time">08:10–08:55</td><td>45m</td><td>Commute. Flashcards or a podcast</td><td>Optional</td></tr>
+<tr><td class="time">09:00–18:00</td><td>9h</td><td>Accenture. No study at desk</td><td>Must</td></tr>
+<tr><td class="time">18:00–19:00</td><td>60m</td><td>Commute, change, snack</td><td>Must</td></tr>
+<tr><td class="time">19:00–20:15</td><td>75m</td><td>Aerovant evening work</td><td>Must</td></tr>
+<tr><td class="time">20:15–20:45</td><td>30m</td><td>Dinner</td><td>Must</td></tr>
+<tr><td class="time">20:45–22:15</td><td>90m</td><td><strong>Study block</strong> (Mon/Wed lesson + reproduce, Tue/Thu lab + write-up)</td><td>Core</td></tr>
+<tr><td class="time">22:15–22:45</td><td>30m</td><td>Family call, tomorrow's one-line goal</td><td>Must</td></tr>
+<tr><td class="time">22:45–23:00</td><td>15m</td><td>Lights out</td><td>Must</td></tr>
+</tbody></table></div>
+<p><strong>Friday (all phases):</strong> evening study is 45 min only (quick quiz on the week's topics + one easy Python problem). Then free.</p>
+<h3 id="saturday-all-phases">Saturday (all phases)</h3>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Dur</th><th>What</th></tr></thead><tbody>
+<tr><td class="time">07:00–07:15</td><td>15m</td><td>Wake</td></tr>
+<tr><td class="time">07:15–08:00</td><td>45m</td><td>Legs + core + 10 min skipping</td></tr>
+<tr><td class="time">08:00–08:45</td><td>45m</td><td>Breakfast, shower</td></tr>
+<tr><td class="time">08:45–11:45</td><td>3h</td><td><strong>Deep block:</strong> the week's hardest lab, then the next lesson</td></tr>
+<tr><td class="time">11:45–12:00</td><td>15m</td><td>Break</td></tr>
+<tr><td class="time">12:00–13:30</td><td>90m</td><td><strong>Project block</strong></td></tr>
+<tr><td class="time">13:30–14:30</td><td>60m</td><td>Lunch, rest</td></tr>
+<tr><td class="time">14:30–16:30</td><td>2h</td><td><strong>Content:</strong> script + film 2 shorts (or one long-video section every 2nd week)</td></tr>
+<tr><td class="time">16:30–17:00</td><td>30m</td><td>Break</td></tr>
+<tr><td class="time">17:00–18:00</td><td>60m</td><td>Edit one short to ready</td></tr>
+<tr><td class="time">18:00–22:30</td><td>4.5h</td><td><strong>Free. No laptop.</strong> Friends, dinner out, hobby</td></tr>
+<tr><td class="time">22:30–23:00</td><td>30m</td><td>Lights out</td></tr>
+</tbody></table></div>
+<h3 id="sunday-all-phases">Sunday (all phases)</h3>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Dur</th><th>What</th></tr></thead><tbody>
+<tr><td class="time">07:30–07:45</td><td>15m</td><td>Wake (sleep-in allowed)</td></tr>
+<tr><td class="time">07:45–08:15</td><td>30m</td><td>Walk + stretch</td></tr>
+<tr><td class="time">08:15–09:00</td><td>45m</td><td>Breakfast</td></tr>
+<tr><td class="time">09:00–10:30</td><td>90m</td><td><strong>Redo the week's hardest lab with no notes</strong></td></tr>
+<tr><td class="time">10:30–10:45</td><td>15m</td><td>Break</td></tr>
+<tr><td class="time">10:45–12:00</td><td>75m</td><td>Project (tests, README) or skip if done</td></tr>
+<tr><td class="time">12:00–13:00</td><td>60m</td><td><strong>Weekly review</strong> (§11) + plan next week</td></tr>
+<tr><td class="time">13:00–14:00</td><td>60m</td><td>Lunch</td></tr>
+<tr><td class="time">14:00–15:00</td><td>60m</td><td>Finish one edit, schedule posts (optional)</td></tr>
+<tr><td class="time">15:00–19:00</td><td>4h</td><td><strong>Recovery. Family, friends, nap. No laptop.</strong></td></tr>
+<tr><td class="time">19:00–20:00</td><td>60m</td><td>Groceries for Mon–Wed, soak chana, pack snacks</td></tr>
+<tr><td class="time">20:00–20:30</td><td>30m</td><td>Dinner</td></tr>
+<tr><td class="time">20:30–21:30</td><td>60m</td><td>Monday prep: bag, read Monday's lesson intro</td></tr>
+<tr><td class="time">21:30–23:00</td><td>90m</td><td>Free, then lights out</td></tr>
+</tbody></table></div>
+</section>
+<section id="3-the-learning-path-in-order">
+<h2>3. The learning path (in order)</h2>
+
+<div class="tracker" aria-label="12 checkpoint tracker">
+  <p class="tracker-title">Checkpoint tracker <span class="small">(click when you can answer it without notes; saved in this browser)</span></p>
+  <div class="chips">
+    <button type="button" class="chip" data-q="q1" aria-pressed="false">Q1</button>
+    <button type="button" class="chip" data-q="q2" aria-pressed="false">Q2</button>
+    <button type="button" class="chip" data-q="q3" aria-pressed="false">Q3</button>
+    <button type="button" class="chip" data-q="q4" aria-pressed="false">Q4</button>
+    <button type="button" class="chip" data-q="q5" aria-pressed="false">Q5</button>
+    <button type="button" class="chip" data-q="q6" aria-pressed="false">Q6</button>
+    <button type="button" class="chip" data-q="q7" aria-pressed="false">Q7</button>
+    <button type="button" class="chip" data-q="q8" aria-pressed="false">Q8</button>
+    <button type="button" class="chip" data-q="q9" aria-pressed="false">Q9</button>
+    <button type="button" class="chip" data-q="q10" aria-pressed="false">Q10</button>
+    <button type="button" class="chip" data-q="q11" aria-pressed="false">Q11</button>
+    <button type="button" class="chip" data-q="q12" aria-pressed="false">Q12</button>
+  </div>
+  <p class="small" id="tracker-count">0 of 12 answered</p>
+</div>
+
+<p>You know none of the 12 diagnostic questions, so the 12 questions become your 12 checkpoints. Do them in this order. Each step says what to learn, the free resource, what you produce, and when you are done.</p>
+<h3 id="stage-0-foundations-20-oct-2026-3-jan-2027-11-weeks">Stage 0: Foundations (20 Oct 2026 – 3 Jan 2027, 11 weeks)</h3>
+<p class="lead"><strong>Week 1 · 19–25 Oct · Setup + Linux</strong></p>
+<ul class="">
+<li>Learn: Linux shell, files, permissions, processes, pipes.</li>
+<li>Resources: Linux Journey (<a href="https://linuxjourney.com" target="_blank" rel="noopener">linuxjourney.com</a>) → "Grasshopper" section. OverTheWire Bandit levels 0–15 (<a href="https://overthewire.org/wargames/bandit" target="_blank" rel="noopener">overthewire.org/wargames/bandit</a>). TryHackMe free room "Linux Fundamentals Part 1".</li>
+<li>Setup: Ubuntu VM (VirtualBox) or WSL2, Burp Suite Community, a GitHub repo called <code>lab-notes</code>, a notes app for flashcards (Anki is free).</li>
+<li>Output: Bandit level 15 reached. <code>lab-notes/README.md</code> with your setup.</li>
+<li>Done when: you can move around Linux without googling <code>cd</code>, <code>grep</code>, <code>chmod</code>, <code>ps</code>.</li>
+</ul>
+<p class="lead"><strong>Week 2 · 26 Oct – 1 Nov · Networking → Checkpoint Q4</strong></p>
+<ul class="">
+<li>Learn: IP, TCP vs UDP, ports, DNS, the three-way handshake, what HTTP looks like on the wire.</li>
+<li>Resources: Practical Networking YouTube ("Networking Fundamentals" playlist). Chris Greer YouTube (Wireshark basics). TryHackMe free rooms "What is Networking", "Intro to LAN".</li>
+<li>Lab: run <code>tcpdump -i any port 80 -w cap.pcap</code>, open a website with <code>curl</code>, open the file in Wireshark, find SYN / SYN-ACK / ACK.</li>
+<li>Output: screenshot + 10-line explanation in <code>lab-notes/networking.md</code>.</li>
+<li>Done when: <strong>Q4</strong> you can point at the handshake in any capture.</li>
+</ul>
+<p class="lead"><strong>Week 3 · 2–8 Nov · How the web works → Checkpoint Q1</strong></p>
+<ul class="">
+<li>Learn: HTTP requests/responses, status codes, headers, cookies, sessions, JWT, same-origin policy.</li>
+<li>Resources: PortSwigger Web Security Academy → "Authentication" and "Session management" learning material (<a href="https://portswigger.net/web-security" target="_blank" rel="noopener">portswigger.net/web-security</a>). MDN "HTTP overview". <a href="https://jwt.io" target="_blank" rel="noopener">jwt.io</a> introduction page.</li>
+<li>Lab: use Burp to intercept a login on OWASP Juice Shop (run with Docker: <code>docker run -p 3000:3000 bkimminich/juice-shop</code>). Find the session cookie. Decode a JWT.</li>
+<li>Output: <code>lab-notes/web-basics.md</code>: "Session cookie vs JWT, one attack each" in your own words.</li>
+<li>Done when: <strong>Q1</strong> answered without notes.</li>
+</ul>
+<p class="lead"><strong>Week 4 · 9–15 Nov · SQL injection → Checkpoint Q2</strong></p>
+<ul class="">
+<li>Learn: how SQL is built from user input, UNION attacks, blind injection basics.</li>
+<li>Resources: PortSwigger SQL injection learning path + labs (first 8 labs). Rana Khalil YouTube (walkthrough after you try each lab for 45 min).</li>
+<li>Output: 6 labs done, one 300-word write-up: "what the UNION payload does to the query".</li>
+<li>Done when: <strong>Q2</strong> a UNION lab solved with no hints.</li>
+</ul>
+<p class="lead"><strong>Week 5 · 16–22 Nov · Python for security → Checkpoint Q3</strong></p>
+<ul class="">
+<li>Learn: Python basics, files, requests, sockets.</li>
+<li>Resources: Automate the Boring Stuff (<a href="https://automatetheboringstuff.com" target="_blank" rel="noopener">automatetheboringstuff.com</a>) chapters 1–6 and 12 (web scraping). Python <code>socket</code> docs. Beej's Guide to Network Programming (concepts only).</li>
+<li>Lab: a script that opens a TCP socket to a site on port 80, sends <code>GET / HTTP/1.1</code>, prints headers. Then a tiny port scanner for your own VM.</li>
+<li>Output: both scripts in a <code>tools</code> repo with a README.</li>
+<li>Done when: <strong>Q3</strong> written from memory.</li>
+</ul>
+<p class="lead"><strong>Week 6 · 23–29 Nov · Access control, IDOR, XSS → Checkpoint Q9 (concept)</strong></p>
+<ul class="">
+<li>Learn: broken access control, IDOR, what XSS actually executes.</li>
+<li>Resources: PortSwigger "Access control" labs (first 6) and "Cross-site scripting" labs (first 5). OWASP Top 10 page for A01 Broken Access Control. OWASP WebGoat (Java, run via Docker) → "Access Control Flaws" lessons.</li>
+<li>Output: write-ups for 2 IDOR labs and 2 XSS labs. In WebGoat, find the Java line where the IDOR happens.</li>
+<li>Done when: <strong>Q9</strong> you can describe IDOR and say "I check the controller method for an ID that is never compared to the logged-in user".</li>
+</ul>
+<p class="lead"><strong>Week 7 · 30 Nov – 6 Dec · SSRF + C basics → Checkpoints Q10, Q5</strong></p>
+<ul class="">
+<li>Learn: SSRF and why <code>169.254.169.254</code> (cloud metadata) matters. C: variables, pointers, arrays, what "out of bounds" means.</li>
+<li>Resources: PortSwigger SSRF learning material + 4 labs. Hacking the Cloud (<a href="https://hackingthe.cloud" target="_blank" rel="noopener">hackingthe.cloud</a>) → "IMDS" pages. C: CS50x week 1–4 (<a href="https://cs50.harvard.edu/x" target="_blank" rel="noopener">cs50.harvard.edu/x</a>) or Beej's Guide to C Programming (<a href="https://beej.us/guide/bgc" target="_blank" rel="noopener">beej.us/guide/bgc</a>). LowLevelLearning YouTube for pointers. Install <code>gcc</code> and <code>gdb</code>.</li>
+<li>Lab: compile a 10-line C program that writes past an array, run it in GDB, watch the variable next to it change.</li>
+<li>Output: <code>lab-notes/ssrf.md</code>, <code>lab-notes/c-memory.md</code> with the GDB output pasted and explained.</li>
+<li>Done when: <strong>Q10</strong> and <strong>Q5</strong> explained in your own words. (1–10 Dec are free days: use the extra hours on C, not on new topics.)</li>
+</ul>
+<p class="lead"><strong>Week 8 · 7–13 Dec · Docker + Git/GitHub Actions → Checkpoints Q6, Q8</strong></p>
+<ul class="">
+<li>Learn: images, containers, Dockerfile, non-root user, multi-stage builds. Git branches, pull requests, a GitHub Actions workflow.</li>
+<li>Resources: TechWorld with Nana "Docker Tutorial for Beginners" (YouTube, 3 h). Docker docs "Dockerfile best practices". GitHub Skills (<a href="https://skills.github.com" target="_blank" rel="noopener">skills.github.com</a>) → "Introduction to GitHub" and "Hello GitHub Actions". Gitleaks README (<a href="https://github.com/gitleaks/gitleaks" target="_blank" rel="noopener">github.com/gitleaks/gitleaks</a>).</li>
+<li>Lab: Dockerfile for your Python tool: multi-stage, <code>USER</code> non-root. Push the tools repo to GitHub and add a workflow that runs Gitleaks; commit a fake API key on a branch and watch it fail.</li>
+<li>Output: green/red screenshots in README.</li>
+<li>Done when: <strong>Q6</strong> and <strong>Q8</strong> done from memory. Accenture starts Fri 11 Dec: Thu and Fri this week are light.</li>
+</ul>
+<p class="lead"><strong>Week 9 · 14–20 Dec · Busy mode (Accenture onboarding)</strong></p>
+<ul class="">
+<li>Only: keep sleep, workouts, and one 60-min lab per evening max. Learn Accenture's real hours and adjust §2.</li>
+<li>Start Project 1 (see §5): a Spring Boot todo API with login.</li>
+<li>Resources: Amigoscode YouTube "Spring Security" tutorial. Spring Security reference docs.</li>
+</ul>
+<p class="lead"><strong>Week 10 · 21–27 Dec · Project 1 + threat modeling → Checkpoint Q12</strong></p>
+<ul class="">
+<li>Learn: STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege).</li>
+<li>Resources: OWASP Threat Modeling Cheat Sheet (<a href="https://cheatsheetseries.owasp.org" target="_blank" rel="noopener">cheatsheetseries.owasp.org</a>). Microsoft "STRIDE threats" docs page. OWASP Threat Dragon (free tool).</li>
+<li>Output: one-page STRIDE table for Project 1. Pipeline adds Semgrep (<a href="https://semgrep.dev" target="_blank" rel="noopener">semgrep.dev</a>, free CLI) and Trivy (<a href="https://trivy.dev" target="_blank" rel="noopener">trivy.dev</a>) image scan.</li>
+<li>Done when: <strong>Q12</strong> one sentence per letter, applied to your own app.</li>
+</ul>
+<p class="lead"><strong>Week 11 · 28 Dec – 3 Jan · Minimum week + cloud/K8s first look → Checkpoints Q7, Q11 (concept level)</strong></p>
+<ul class="">
+<li>Learn: AWS IAM users / roles / policies, S3 least privilege. Kubernetes basics and what RBAC controls.</li>
+<li>Resources: <a href="https://flaws.cloud" target="_blank" rel="noopener">flaws.cloud</a> levels 1–2 (free, read-only). AWS Skill Builder free course "AWS Security Fundamentals". TechWorld with Nana "Kubernetes Tutorial for Beginners" first hour. OWASP Kubernetes Top 10.</li>
+<li>Output: <code>lab-notes/cloud-basics.md</code>, <code>lab-notes/k8s-basics.md</code>.</li>
+<li>Done when: <strong>Q7</strong> and <strong>Q11</strong> explained at concept level. These get real labs in Jun–Aug 2027.</li>
+<li>Buy the course when you are ready. Verify the checkout price.</li>
+</ul>
+<p class="lead"><strong>Week 12 · 4–10 Jan 2027 · Course starts</strong></p>
+<ul class="">
+<li>Retake the 12 questions. Target: 10 of 12. The two you miss become Sunday revision topics.</li>
+</ul>
+<h3 id="stage-1-cyber-tech-mastery-jan-may-2027">Stage 1: Cyber Tech Mastery (Jan – May 2027)</h3>
+<p>Provisional order (from the course page; replace with the real dashboard order after purchase):</p>
+<div class="tbl"><table><thead><tr><th>Month</th><th>Course topics</th><th>Role fit</th><th>Your output</th></tr></thead><tbody>
+<tr><td>Jan</td><td>C, pointers, memory, GDB</td><td>Supporting</td><td>GDB walkthrough note of one course program</td></tr>
+<tr><td>Feb</td><td>Buffer overflow, format strings (course labs only); start PHP, DB, sessions, Docker</td><td>Supporting → Core</td><td>One exploit write-up with "how the mitigation stops it"; a Dockerised PHP app</td></tr>
+<tr><td>Mar</td><td>SQLi, XSS, session attacks, Burp, Android traffic</td><td><strong>Core</strong></td><td>Find and fix 6 vulns in the app you built; OWASP Top 10 mapping</td></tr>
+<tr><td>Apr</td><td>Python sockets, servers, packet capture, ARP-spoof detector</td><td>Supporting (Core for detection)</td><td>Project 2</td></tr>
+<tr><td>May</td><td>WireGuard, port forwarding, VPN API, containers</td><td>Core (infra)</td><td>VPN lab + hardened API + STRIDE table</td></tr>
+</tbody></table></div>
+<p>Weekly cycle: Mon lesson + reproduce · Tue lab · Wed lesson + reproduce · Thu lab + 300-word explanation · Fri quiz · Sat hardest lab · Sun redo without notes. Minimum 6 h, normal 10 h, stretch 14 h.</p>
+<p>No duplicates: when the course covers a topic that week, do not do a PortSwigger lab on the same topic. Use the course lab and write the explanation instead.</p>
+<p>If behind: count remaining lessons, divide by weeks to 31 May. If more than 2 lessons + 2 labs/week, move the end to 30 June. Lab access runs to Jan 2028, so you cannot "lose" the course. Never borrow from sleep.</p>
+<h3 id="stage-2-cloud-devsecops-jun-aug-2027">Stage 2: Cloud + DevSecOps (Jun – Aug 2027)</h3>
+<p>Weekday blocks move to this. Course lab revisited every second Sunday.</p>
+<div class="tbl"><table><thead><tr><th>Month</th><th>Learn</th><th>Free resources</th><th>Output</th></tr></thead><tbody>
+<tr><td>Jun</td><td>AWS IAM, S3, CloudTrail, GuardDuty basics; Terraform basics</td><td><a href="https://flaws.cloud" target="_blank" rel="noopener">flaws.cloud</a>, <a href="https://flaws2.cloud" target="_blank" rel="noopener">flaws2.cloud</a>; AWS Skill Builder free; HashiCorp Terraform tutorials (<a href="https://developer.hashicorp.com/terraform/tutorials" target="_blank" rel="noopener">developer.hashicorp.com/terraform/tutorials</a>); Hacking the Cloud</td><td>Project 3 part 1: Terraform a weak AWS lab on free tier, document impact, destroy after each session</td></tr>
+<tr><td>Jul</td><td>Kubernetes security: RBAC, secrets, network policy, pod security, image scanning</td><td>Kubernetes Goat (<a href="https://madhuakula.com/kubernetes-goat" target="_blank" rel="noopener">madhuakula.com/kubernetes-goat</a>) on kind/minikube; Kubernetes docs "Security"; OWASP Kubernetes Top 10; kube-bench</td><td>Project 3 part 2: 3 scenarios exploited and fixed</td></tr>
+<tr><td>Aug</td><td>CI/CD security: SAST, DAST, SCA, SBOM, supply chain</td><td>Semgrep Academy (<a href="https://academy.semgrep.dev" target="_blank" rel="noopener">academy.semgrep.dev</a>); Snyk Learn (<a href="https://learn.snyk.io" target="_blank" rel="noopener">learn.snyk.io</a>); OWASP ZAP docs; Trivy; Checkov (<a href="https://checkov.io" target="_blank" rel="noopener">checkov.io</a>); SLSA (<a href="https://slsa.dev" target="_blank" rel="noopener">slsa.dev</a>); Sigstore docs</td><td>Project 3 part 3: Checkov + Trivy in CI; write-up</td></tr>
+</tbody></table></div>
+<p>Decide on a certification in June only if half of your 20 target job postings ask for one (AWS Security Specialty or CKS are the usual ones).</p>
+<h3 id="stage-3-interview-phase-sep-2027-onward">Stage 3: Interview phase (Sep 2027 onward)</h3>
+<ul class="">
+<li><strong>Sep 2027:</strong> CV v1, GitHub profile README linking all 3 projects, LinkedIn. Two mock interviews with peers (null Chennai or OWASP Chennai meetups are good places to find them). One portfolio review by a senior security engineer.</li>
+<li><strong>Oct–Dec 2027:</strong> Applications start (12-month mark). Check your Accenture offer letter for the notice period and any service agreement first; it may shift this by a quarter. Friday block grows to 3 h: security scenarios, secure-code review practice, Python. DSA only if a target company asks for it (NeetCode free roadmap, 3 problems/week max).</li>
+<li><strong>Jan–Jun 2028:</strong> interview loop, switch inside the 13–18 month window.</li>
+</ul>
+</section>
+<section id="4-weekly-rotation-at-a-glance">
+<h2>4. Weekly rotation at a glance</h2>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Stage 0 (now)</th><th>Stage 1 (course)</th><th>Stage 2 (cloud)</th><th>Workout</th></tr></thead><tbody>
+<tr><td>Mon</td><td>Lesson + reproduce</td><td>Course lesson A</td><td>Cloud lesson</td><td>Push</td></tr>
+<tr><td>Tue</td><td>Lab</td><td>Course lab A</td><td>Cloud lab</td><td>Pull</td></tr>
+<tr><td>Wed</td><td>Lesson + reproduce</td><td>Course lesson B</td><td>K8s / DevSecOps lesson</td><td>Legs + core</td></tr>
+<tr><td>Thu</td><td>Lab + write-up</td><td>Course lab B + write-up</td><td>Lab + write-up</td><td>Skipping + mobility</td></tr>
+<tr><td>Fri</td><td>45 min quiz + 1 Python problem</td><td>same</td><td>same, grows to 3 h in Oct 2027</td><td>Upper hybrid</td></tr>
+<tr><td>Sat</td><td>Deep block + project + content</td><td>same</td><td>same</td><td>Legs + core + skipping</td></tr>
+<tr><td>Sun</td><td>Redo lab, review, rest</td><td>same</td><td>same</td><td>Walk + stretch</td></tr>
+</tbody></table></div>
+</section>
+<section id="5-projects-one-at-a-time">
+<h2>5. Projects (one at a time)</h2>
+<p><strong>Project 1 · Secure Spring Boot API + DevSecOps pipeline</strong> (14 Dec 2026 – 31 Jan 2027, 3 h/week)</p>
+<ul class="">
+<li>A todo API with login (Spring Security, JWT), roles, Postgres, Docker Compose.</li>
+<li>Branch <code>vulnerable</code>: 3 documented flaws (IDOR on <code>/todos/{id}</code>, missing role check on an admin endpoint, hard-coded secret). Branch <code>main</code>: each fixed with a test that fails on <code>vulnerable</code>.</li>
+<li>CI: Gitleaks, Semgrep, Trivy, all blocking. STRIDE table in README. 3-min demo video.</li>
+<li>Interview story: "Here is the flaw, here is the failing test, here is the pipeline catching it."</li>
+</ul>
+<p><strong>Project 2 · netwatch</strong> (Apr – mid May 2027, inside the course Python module)</p>
+<ul class="">
+<li>The course's ARP-spoof detector turned into a packaged CLI with tests on saved pcaps, a second detector (port-scan), JSON alerts, Dockerfile, CI.</li>
+<li>Interview story: replay a pcap, show the alert, explain false positives.</li>
+</ul>
+<p><strong>Project 3 · Cloud + Kubernetes misconfiguration lab</strong> (Jun – Aug 2027)</p>
+<ul class="">
+<li>Terraform a deliberately weak AWS setup (free tier), Kubernetes Goat scenarios, then Checkov + Trivy in CI blocking the misconfigs, <code>fixed</code> branch with remediation.</li>
+<li>Interview story: misconfig → blast radius → the CI check that now catches it.</li>
+</ul>
+<p>Plus <code>lab-notes</code>: every write-up goes here. It is evidence, not a project.</p>
+</section>
+<section id="6-weekly-hours-phase-b-five-office-days">
+<h2>6. Weekly hours (Phase B, five office days)</h2>
+<div class="tbl"><table><thead><tr><th>Category</th><th>Hours</th></tr></thead><tbody>
+<tr><td>Sleep</td><td>52.75</td></tr>
+<tr><td>Accenture</td><td>45</td></tr>
+<tr><td>Commute (passive learning on the morning leg)</td><td>7.5</td></tr>
+<tr><td>Aerovant evenings</td><td>6.25</td></tr>
+<tr><td>Workouts</td><td>4.5</td></tr>
+<tr><td>Meals, hygiene, prep</td><td>15.75</td></tr>
+<tr><td><strong>Course / lessons</strong></td><td><strong>4.5</strong></td></tr>
+<tr><td><strong>Hands-on labs</strong></td><td><strong>6</strong></td></tr>
+<tr><td><strong>Project</strong></td><td><strong>2.75</strong></td></tr>
+<tr><td><strong>Interview prep</strong></td><td><strong>0.75</strong></td></tr>
+<tr><td>Content</td><td>4</td></tr>
+<tr><td>Review + planning</td><td>2</td></tr>
+<tr><td>Personal, family, rest</td><td>13.75</td></tr>
+<tr><td>Breaks + buffer</td><td>2.5</td></tr>
+<tr class="total"><td><strong>Total</strong></td><td><strong>168</strong></td></tr>
+</tbody></table></div>
+<p>Active cyber work: 14 h/week. Phase A2 WFH days and A3 free days are higher (4–5 h/day), but 5 h/day is the cap.</p>
+</section>
+<section id="7-fitness-and-food">
+<h2>7. Fitness and food</h2>
+<p class="lead"><strong>Workouts (40 min weekdays, 45 min Sat)</strong></p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Session</th><th>Exercises</th></tr></thead><tbody>
+<tr><td>Mon</td><td>Push</td><td>Push-ups 4×8–15 · Pike push-ups 3×6–10 · DB floor press 3×10–12 · DB lateral raise 3×12–15 · DB overhead triceps 2×12</td></tr>
+<tr><td>Tue</td><td>Pull</td><td>Pull-ups 4×max (negatives 4×5 if under 3) · DB row 3×10–12/side · Chin-ups 2×max · DB curl 3×10–12 · Rear-delt fly 2×15</td></tr>
+<tr><td>Wed</td><td>Legs + core</td><td>Goblet squat 4×12–15 · Bulgarian split squat 3×8–10/leg · DB RDL 3×12 · Calf raise 3×20 · Hanging knee raise 3×10–15 · Plank 3×45 s</td></tr>
+<tr><td>Thu</td><td>Cardio + mobility (30 min)</td><td>Skipping 10 × (60 s on / 30 s off) · 15 min hips, shoulders, back</td></tr>
+<tr><td>Fri</td><td>Upper hybrid</td><td>Pull-ups 3×max · Push-ups 3×max · DB shoulder press 3×10 · DB row 3×12 · Hanging leg raise 3×10</td></tr>
+<tr><td>Sat</td><td>Legs + core + skip</td><td>Wednesday list with 3-s lowering · Side plank 3×30 s · 10 min easy skipping</td></tr>
+<tr><td>Sun</td><td>Recovery</td><td>20 min walk, 10 min stretch</td></tr>
+</tbody></table></div>
+<p>Progression: hit the top of the range two sessions in a row → add weight (backpack with books for pull-ups/squats), slow the lowering to 3 s, or use a harder variation (archer push-ups, pistol progressions). Deload every 6th week (half the sets). Abs show when body fat drops; the food plan does that, not extra cardio.</p>
+<p>Free resources: Calisthenic Movement YouTube (pull-up and push-up progressions), r/bodyweightfitness Recommended Routine (free), Jeff Nippard YouTube (form).</p>
+<p class="lead"><strong>Food without a fridge (Chennai)</strong></p>
+<ul class="">
+<li>Protein target about 110–130 g/day.</li>
+<li>Shelf-stable: eggs (buy 12 twice a week, keep cool and dry), 200 ml UHT tetra milk (open and finish), oats, poha, peanuts, roasted chana, sattu, peanut butter, dry dal and chana. Buy daily: curd cups, paneer, chicken or fish, cooked the same evening.</li>
+<li>Rule: nothing cooked is kept overnight. Soak legumes overnight in a covered steel vessel.</li>
+<li>Breakfast 07:10: 3 eggs + oats in tetra milk + banana (≈35 g protein).</li>
+<li>Lunch (packed at 07:50, eaten by 13:00): rice or 3 rotis + dal/chana cooked that morning (15 min pressure cook) + curd cup (≈25 g). Canteen fallback: dal, curd, eggs.</li>
+<li>Snack 18:45: 50 g roasted chana + peanuts or sattu in water (≈15 g).</li>
+<li>Dinner 20:15: 150 g paneer / chicken or 3 eggs + rice/roti + vegetable (≈35 g).</li>
+<li>Before bed: one tetra milk (≈7 g).</li>
+<li>Sunday 19:00 and Wednesday evening: restock.</li>
+</ul>
+</section>
+<section id="8-ricky-techie-content">
+<h2>8. Ricky.Techie content</h2>
+<ul class="">
+<li>Minimum: 1 short/week + 1 carousel every 2nd week. Normal: 2 shorts + 1 carousel/week + 1 long video/month. Never more than Saturday 14:30–18:00 plus Sunday 14:00–15:00.</li>
+<li>Rule: only film a topic after you have written its explanation on Thursday. No exploit steps that work against systems you do not own; show concept + defence.</li>
+<li>Pipeline: idea (Sunday review, 10 min) → research = Thursday write-up → script (Sat 14:30, 30 min) → film 2 shorts (Sat 15:00) → edit 1 (Sat 17:00) → schedule (Sun 14:00) → check numbers first Sunday of the month.</li>
+<li>First topics, straight from the weeks above: "my first security lab setup", "the TCP handshake in Wireshark", "session cookie vs JWT", "what a UNION injection does to the query", "why cloud metadata matters for SSRF", "a pipeline that blocks secrets" (long video, Dec), "starting a 5-month cyber course: my system" (Jan).</li>
+</ul>
+</section>
+<section id="9-resource-library">
+<h2>9. Resource library</h2>
+<p class="lead"><strong>Practice platforms (free)</strong></p>
+<ul class="">
+<li>PortSwigger Web Security Academy — <a href="https://portswigger.net/web-security" target="_blank" rel="noopener">portswigger.net/web-security</a> (main AppSec practice)</li>
+<li>TryHackMe — <a href="https://tryhackme.com" target="_blank" rel="noopener">tryhackme.com</a> (free rooms for Linux, networking, web)</li>
+<li>OverTheWire Bandit — <a href="https://overthewire.org/wargames/bandit" target="_blank" rel="noopener">overthewire.org/wargames/bandit</a> (Linux)</li>
+<li>picoCTF — <a href="https://picoctf.org" target="_blank" rel="noopener">picoctf.org</a> (beginner CTF)</li>
+<li>Hacker101 — <a href="https://hacker101.com" target="_blank" rel="noopener">hacker101.com</a> (HackerOne's free course + CTF)</li>
+<li>OWASP Juice Shop, WebGoat (Java), crAPI (APIs) — vulnerable apps you run locally in Docker</li>
+<li><a href="https://pwn.college" target="_blank" rel="noopener">pwn.college</a> — <a href="https://pwn.college" target="_blank" rel="noopener">pwn.college</a> (binary exploitation, free, from ASU)</li>
+<li><a href="https://flaws.cloud" target="_blank" rel="noopener">flaws.cloud</a>, <a href="https://flaws2.cloud" target="_blank" rel="noopener">flaws2.cloud</a> — AWS security challenges</li>
+<li>CloudGoat — <a href="https://github.com/RhinoSecurityLabs/cloudgoat" target="_blank" rel="noopener">github.com/RhinoSecurityLabs/cloudgoat</a> (AWS, destroy after use, watch cost)</li>
+<li>Kubernetes Goat — <a href="https://madhuakula.com/kubernetes-goat" target="_blank" rel="noopener">madhuakula.com/kubernetes-goat</a></li>
+<li>APIsec University — <a href="https://apisecuniversity.com" target="_blank" rel="noopener">apisecuniversity.com</a> (free API security courses)</li>
+<li>Snyk Learn — <a href="https://learn.snyk.io" target="_blank" rel="noopener">learn.snyk.io</a> (short secure-coding lessons)</li>
+<li>Semgrep Academy — <a href="https://academy.semgrep.dev" target="_blank" rel="noopener">academy.semgrep.dev</a></li>
+</ul>
+<p class="lead"><strong>Free courses and reading</strong></p>
+<ul class="">
+<li><a href="https://roadmap.sh/cyber-security" target="_blank" rel="noopener">roadmap.sh/cyber-security</a> (big-picture map)</li>
+<li>OWASP Top 10, OWASP API Security Top 10, OWASP Cheat Sheet Series — <a href="https://cheatsheetseries.owasp.org" target="_blank" rel="noopener">cheatsheetseries.owasp.org</a></li>
+<li>Linux Journey — <a href="https://linuxjourney.com" target="_blank" rel="noopener">linuxjourney.com</a></li>
+<li>Automate the Boring Stuff with Python — <a href="https://automatetheboringstuff.com" target="_blank" rel="noopener">automatetheboringstuff.com</a></li>
+<li>Beej's Guide to C Programming and Beej's Guide to Network Programming — <a href="https://beej.us" target="_blank" rel="noopener">beej.us</a></li>
+<li>CS50x — <a href="https://cs50.harvard.edu/x" target="_blank" rel="noopener">cs50.harvard.edu/x</a> (C weeks 1–4)</li>
+<li>Docker docs, Kubernetes docs "Security" section, Spring Security reference docs</li>
+<li>GitHub Skills — <a href="https://skills.github.com" target="_blank" rel="noopener">skills.github.com</a></li>
+<li>HashiCorp Terraform tutorials — <a href="https://developer.hashicorp.com/terraform/tutorials" target="_blank" rel="noopener">developer.hashicorp.com/terraform/tutorials</a></li>
+<li>AWS Skill Builder free courses — <a href="https://skillbuilder.aws" target="_blank" rel="noopener">skillbuilder.aws</a></li>
+<li>Hacking the Cloud — <a href="https://hackingthe.cloud" target="_blank" rel="noopener">hackingthe.cloud</a></li>
+<li>SLSA — <a href="https://slsa.dev" target="_blank" rel="noopener">slsa.dev</a>, Sigstore — <a href="https://sigstore.dev" target="_blank" rel="noopener">sigstore.dev</a> (supply chain)</li>
+<li>NeetCode — <a href="https://neetcode.io" target="_blank" rel="noopener">neetcode.io</a> (DSA, only when needed)</li>
+</ul>
+<p class="lead"><strong>YouTube channels</strong></p>
+<ul class="">
+<li>Networking/Linux: Practical Networking, Chris Greer (Wireshark), NetworkChuck, David Bombal</li>
+<li>Web/AppSec: Rana Khalil (PortSwigger walkthroughs), InsiderPhD (bug bounty for beginners), NahamSec, STÖK, PwnFunction (short visual explainers)</li>
+<li>General hacking: John Hammond, IppSec, The Cyber Mentor</li>
+<li>Low level: LiveOverflow (binary exploitation playlist), LowLevelLearning</li>
+<li>Docker/K8s/cloud: TechWorld with Nana, freeCodeCamp (AWS courses)</li>
+<li>Java/Spring: Amigoscode, Dan Vega</li>
+<li>Long free courses: <a href="https://freeCodeCamp.org" target="_blank" rel="noopener">freeCodeCamp.org</a></li>
+</ul>
+<p class="lead"><strong>Blogs and research</strong></p>
+<ul class="">
+<li>PortSwigger Research — <a href="https://portswigger.net/research" target="_blank" rel="noopener">portswigger.net/research</a></li>
+<li>tl;dr sec newsletter — <a href="https://tldrsec.com" target="_blank" rel="noopener">tldrsec.com</a> (weekly AppSec/cloud roundup)</li>
+<li>Snyk blog, Trail of Bits blog, Google Project Zero (advanced; read later)</li>
+<li>HackerOne Hacktivity (real disclosed reports)</li>
+</ul>
+<p class="lead"><strong>Communities</strong></p>
+<ul class="">
+<li>null Chennai — <a href="https://null.community" target="_blank" rel="noopener">null.community</a> (free monthly security meetups in Chennai)</li>
+<li>OWASP Chennai chapter — <a href="https://owasp.org/www-chapter-chennai" target="_blank" rel="noopener">owasp.org/www-chapter-chennai</a></li>
+<li>Selfmade Ninja Academy community (comes with the course)</li>
+<li>Reddit: r/netsec, r/AskNetsec, r/cybersecurity, r/bugbounty, r/devsecops</li>
+<li>TryHackMe and PortSwigger Discord servers</li>
+</ul>
+<p class="lead"><strong>Podcasts for the commute</strong></p>
+<ul class="">
+<li>Darknet Diaries (stories), Critical Thinking – Bug Bounty Podcast (technical), Risky Business (news), Security Now</li>
+</ul>
+</section>
+<section id="10-three-modes">
+<h2>10. Three modes</h2>
+<div class="tbl"><table><thead><tr><th>Mode</th><th>When</th><th>Keep</th><th>Drop</th></tr></thead><tbody>
+<tr><td>Normal</td><td>Default</td><td>Full timetable</td><td>—</td></tr>
+<tr><td>Busy</td><td>Work deadline, late Aerovant, travel</td><td>Jobs, sleep, meals, 3 workouts, the one most important cyber task</td><td>Content, Friday coding, Sunday project</td></tr>
+<tr><td>Recovery</td><td>Illness, two nights under 6 h, personal event</td><td>Sleep, meals, jobs, a daily walk</td><td>Everything else. Restart next Monday with a recalculated target. No catch-up hours</td></tr>
+</tbody></table></div>
+<p><strong>Minimum viable week (still a win):</strong> lights out by 23:00 five nights · jobs done · one lesson reproduced · one lab on Saturday · three workouts · protein at breakfast and dinner · 30-min Sunday review · one family conversation a day.</p>
+<p><strong>Task classes:</strong> Must = sleep, meals, jobs, Sunday review, daily family contact. Important (defer within the week) = lessons, labs, project milestone, workouts (min 3). Optional = content beyond minimum, Friday coding, commute podcasts, extra lessons.</p>
+</section>
+<section id="11-weekly-scorecard-sunday-12-00">
+<h2>11. Weekly scorecard (Sunday 12:00)</h2>
+<p>Tick what happened. 8+ green, 6–7 amber, under 6 red. Two reds in a row → next week is the minimum viable week on purpose.</p>
+<ul class="tasks">
+<li><label><input type="checkbox" id="task-1" data-persist="task-1"> <span>Jobs: Accenture and Aerovant done, nothing spilled into the weekend</span></label></li>
+<li><label><input type="checkbox" id="task-2" data-persist="task-2"> <span>2 lessons studied and reproduced</span></label></li>
+<li><label><input type="checkbox" id="task-3" data-persist="task-3"> <span>2 weekday labs + Saturday lab done (or blocker written down)</span></label></li>
+<li><label><input type="checkbox" id="task-4" data-persist="task-4"> <span>1 concept explained in writing without notes</span></label></li>
+<li><label><input type="checkbox" id="task-5" data-persist="task-5"> <span>Project milestone committed</span></label></li>
+<li><label><input type="checkbox" id="task-6" data-persist="task-6"> <span>Friday quiz + 1 Python problem</span></label></li>
+<li><label><input type="checkbox" id="task-7" data-persist="task-7"> <span>5 of 6 workouts</span></label></li>
+<li><label><input type="checkbox" id="task-8" data-persist="task-8"> <span>Minimum content published</span></label></li>
+<li><label><input type="checkbox" id="task-9" data-persist="task-9"> <span>Lights out by 23:00 on 6 nights</span></label></li>
+<li><label><input type="checkbox" id="task-10" data-persist="task-10"> <span>Saturday evening and Sunday afternoon laptop-free; family contact every weekday</span></label></li>
+</ul>
+<p class="lead"><strong>Five Sunday questions</strong></p>
+<ol class="">
+<li>Which concept could I explain to a colleague this week without notes, and which could I not?</li>
+<li>Which block got skipped more than twice, and was it the block or the time slot?</li>
+<li>Is the project milestone committed? If not, scope problem or time problem?</li>
+<li>How many nights asleep by 23:00, and how did the workouts feel?</li>
+<li>What is the one thing next week that makes the week a success?</li>
+</ol>
+<p class="lead"><strong>Adjustment rules</strong></p>
+<ul class="">
+<li>Block skipped 3 times → move it, do not shrink it.</li>
+<li>Ahead by a week → spend it on the project or on rest, not a second topic.</li>
+<li>Aerovant over 90 min on 3 evenings → renegotiate scope; until then study block is 60 min.</li>
+<li>Sleep under 6.5 h on 3 nights → recovery mode Mon–Tue automatically.</li>
+<li>Accenture hours arrive → re-cut §2 the same Sunday.</li>
+<li>Every 4th Sunday → re-read §3 dates and move what slipped.</li>
+</ul>
+</section>
+<section id="12-what-to-tell-me-next">
+<h2>12. What to tell me next</h2>
+<ol class="">
+<li>Accenture shift and office mode (from the onboarding mail).</li>
+<li>The Aerovant evening hours you agree on for December.</li>
+<li>The Cyber Tech Mastery dashboard module list after purchase.</li>
+<li>Your week-12 score on the 12 questions.</li>
+</ol>
+</section>
+<footer>Generated from Ricky-Cyber-Career-Plan.md by build.py. Edit the Markdown, run <code>python3 build.py</code>, refresh.</footer>
+</main>
+</div>
+<script>
+(function(){
+  var store = {get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+               set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  // checkboxes
+  document.querySelectorAll('input[data-persist]').forEach(function(cb){
+    cb.checked = store.get('plan:'+cb.dataset.persist) === '1';
+    cb.addEventListener('change', function(){ store.set('plan:'+cb.dataset.persist, cb.checked?'1':'0'); });
+  });
+  // tracker chips
+  var chips = document.querySelectorAll('.chip[data-q]'), count = document.getElementById('tracker-count');
+  function refresh(){ var n=0; chips.forEach(function(c){ if(c.getAttribute('aria-pressed')==='true') n++; });
+    if(count) count.textContent = n + ' of 12 answered'; }
+  chips.forEach(function(c){
+    c.setAttribute('aria-pressed', store.get('plan:'+c.dataset.q)==='1' ? 'true':'false');
+    c.addEventListener('click', function(){ var on = c.getAttribute('aria-pressed')!=='true';
+      c.setAttribute('aria-pressed', on?'true':'false'); store.set('plan:'+c.dataset.q, on?'1':'0'); refresh(); });
+  });
+  refresh();
+  // active nav
+  var links = document.querySelectorAll('nav a'), secs = document.querySelectorAll('main section[id]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){
+      links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id); }); } }); },
+      {rootMargin:'-20% 0px -70% 0px'});
+    secs.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
